@@ -385,9 +385,42 @@ img, video {
 @media (max-width: 540px){
 .extra-large-text{
   font-size: 2rem;
-    line-height: 0%;
+    line-height: normal;
 
+ }
+.medium-text{
+  font-size: 1.5rem;
+    }
+
+.large-text{
+  font-size: 2rem;
+    line-height: normal;
+   }
+
+   .button{
+    line-height: normal;
+    
+   }
+    .button2{
+    line-height: normal;
+    }
+    .button3{
+    line-height: normal;
+    }
+
+    .margin-top{
+      margin-top: 2rem;
+    }
+    .gap-1{
+      gap: 0rem;
+    }
+
+.small-text{
+  font-size: 0.8rem;
+  line-height: normal;
 }
+ 
+
 }
 
 
@@ -571,6 +604,7 @@ img, video {
   }
 
   .contact-info {
+    flex-direction: column;
     gap: 40px;
   }
 

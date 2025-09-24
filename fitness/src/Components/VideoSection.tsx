@@ -4,13 +4,15 @@ const videoSection = () => {
     <div className="video-section" style={{ position: "relative" }}>
       <div className="container-vid">
         <p className="strong-font large-text white">Support center</p>
-        <p
+        <div
           className="strong-font small-text white"
           style={{ textAlign: "center" }}
         >
-          Use this space to highlight your most popular services.
-          <p>You can also use this for your flagship products.</p>
-        </p>
+         <div>
+           Use this space to highlight your most popular services.
+          </div>
+          <div>You can also use this for your flagship products.</div>
+        </div>
         <a className="button3" >GET SUPPORT</a>
       </div>
       <video className="services-image" autoPlay loop muted style={{ width: "100%" , height: "100%", objectFit: "cover" }}>
