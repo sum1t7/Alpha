@@ -1,5 +1,32 @@
+import { motion } from "framer-motion";
 import aboutImage from "../assets/width_1600 (1).webp";
+
 const About = () => {
+   const slideInRight = {
+    hidden: { 
+      opacity: 0, 
+      x: 100 
+    },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      } as const
+    }
+  };
+
+   const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
   return (
     <section id="about" className="about-section">
       <div className="row-container-about padding-top">
@@ -27,13 +54,28 @@ const About = () => {
             />
           </g>
         </svg>
+
         <div className="gradient-about"></div>
         <img src={aboutImage} className="about-image " />
         <div className=""></div>
 
-        <div className="column-container ">
-          <p className="strong-font orange large-text">About Us</p>
-          <p className="white small-text small-container">
+        <motion.div 
+          className="column-container"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.p 
+            className="strong-font orange large-text"
+            variants={slideInRight}
+          >
+            About Us
+          </motion.p>
+          <motion.p 
+            className="white small-text small-container"
+            variants={slideInRight}
+          >
             Founded in 2017, Alpha Fitness & Self Defence (Govt. Reg.) was born
             out of a passion for teaching authentic self-defense and empowering
             individuals of all backgrounds. With expertise in Kyokushin Karate,
@@ -44,8 +86,8 @@ const About = () => {
             strength. Whether you're here to master martial arts or improve your
             fitness, you'll find a supportive community and dedicated guidance
             every step of the way.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
