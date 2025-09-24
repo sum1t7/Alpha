@@ -1,4 +1,4 @@
-
+import vid from '../assets/Vid.mp4'
 const videoSection = () => {
   return (
     <div className="video-section" style={{ position: "relative" }}>
@@ -15,7 +15,7 @@ const videoSection = () => {
       </div>
       <video className="services-image" autoPlay loop muted style={{ width: "100%" , height: "100%", objectFit: "cover" }}>
         <source
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          src={vid}
           type="video/mp4"
         />
         Your browser does not support the video tag.
