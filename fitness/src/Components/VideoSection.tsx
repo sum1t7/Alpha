@@ -8,10 +8,10 @@ const videoSection = () => {
           className="strong-font small-text white"
           style={{ textAlign: "center" }}
         >
-         <div>
+         <p>
            Use this space to highlight your most popular services.
-          </div>
-          <div>You can also use this for your flagship products.</div>
+          </p>
+          <p>You can also use this for your flagship products.</p>
         </div>
         <a className="button3" >GET SUPPORT</a>
       </div>
